@@ -1,0 +1,16 @@
+# LaTeX and Overleaf build products
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.pdf
+*.synctex.gz
+*.toc
+*.xdv
+
+# Local editor and operating-system files
+.DS_Store
+Icon?
