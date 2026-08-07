@@ -48,4 +48,28 @@ Exit and review & What the student could access, avoid, communicate, and influen
 
 \adaptationbox{Sensory-friendliness varies by person, activity, time, pain, fatigue, culture, and prior experience. A checklist cannot prescribe headphones, dim lighting, or breaks for everyone. Reviewers should also avoid creating a reset space that becomes exclusion or a reward contingent on compliance. The revision trigger is simple: if the support reduces visible behavior but also reduces communication, learning, or belonging, redesign it.}
 
+\vfill
+\begin{center}
+{\scriptsize\bfseries\color{DeepNavy}Placement Access Path: Make the Next Move Visible}\par
+\vspace{0.035in}
+\begin{tikzpicture}[
+  access/.style={draw=DeepNavy, rounded corners=2pt, minimum width=1.10in,
+    minimum height=0.46in, align=center, font=\tiny, inner sep=3pt},
+  next/.style={-{Latex[length=1.5mm]}, line width=0.65pt, draw=PrimaryRed}
+]
+\node[access, fill=SoftBlue] (goal) {\textbf{NAME GOAL}\\plain language};
+\node[access, fill=SoftGold, right=0.09in of goal] (show) {\textbf{SHOW FIRST STEP}\\model or example};
+\node[access, fill=SoftGreen, right=0.09in of show] (route) {\textbf{CHOOSE ROUTE}\\point, card, device};
+\node[access, fill=SoftRose, right=0.09in of route] (reset) {\textbf{RESET / HELP}\\visible checkpoint};
+\node[access, fill=SoftBlue, right=0.09in of reset] (proof) {\textbf{SHOW SUCCESS}\\save, explain, demonstrate};
+\draw[next] (goal) -- (show);
+\draw[next] (show) -- (route);
+\draw[next] (route) -- (reset);
+\draw[next] (reset) -- (proof);
+\end{tikzpicture}
+
+\vspace{0.025in}
+\parbox{0.92\textwidth}{\centering\tiny\textit{Placement-derived access pattern.} Grade 2 IGNITE planning paired a visible goal and modeled start with picture-rich choices, flexible response routes, a help/reset checkpoint, and an observable proof of completion.}
+\end{center}
+
 \sourcebox{Guggenheim sensory-environment course resource \citep{guggenheimSensory}; Michigan Developmental Disabilities Institute checklist \citep{michigan2025sensory}.}
