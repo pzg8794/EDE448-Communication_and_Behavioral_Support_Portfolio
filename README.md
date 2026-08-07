@@ -20,6 +20,12 @@ latexmk -pdf main.tex
 
 The portfolio uses **Communication as Access-to-Agency** as its organizing theme. It contains ten resources covering sensory access, inclusive peer culture, Prevent-Teach-Reinforce planning, dignity-centered classroom systems, routines and transitions, AAC selection, communication opportunities, low-tech AAC continuity, home-school communication, and flexible peer participation.
 
+Each resource now carries an explicit assignment or practice-artifact trail. The source set includes the completed Pine Brook sensory walk, taught Grade 2 Kit for Kids lesson, PTR completion notes, Grade 2 IGNITE curriculum supports, EDU486 youth feedback, Field Friday agenda, access-pathways graphic, Identity Beads and policy/showcase roles, and the authentic July 29 family-update workflow. Resource 6 remains native TikZ, and all ten resources remain two-page spreads in the 26-page PDF.
+
+## Privacy and Evidence Boundary
+
+The repository includes only de-identified text and public-safe reconstructions. It does not contain participant photographs, youth names, personalized family stories, parent contact information, or completed parent responses. Resource 9 derives its headings and sequence from the private family-update production archive, then leaves its proposed family-return fields visibly blank. The prospective AAC examples do not claim that a particular camper used TD Snap or another AAC system.
+
 ## Course Repository Relationship
 
 The public course hub is [pzg8794/EDE448](https://github.com/pzg8794/EDE448). In a local checkout of that course repository, this dedicated repository lives at:
