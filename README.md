@@ -8,7 +8,7 @@ Set `main.tex` as the main document. The project is self-contained:
 
 - `main.tex`: title page, assignment and rubric map, portfolio map, synthesis, and document assembly
 - `resources/`: ten numbered practitioner resources
-- `assets/artifact-previews/`: three actual completed artifact pages embedded in Resources 5, 7, and 9
+- `assets/artifact-previews/`: six restricted artifact visuals embedded on the title page and in Resources 4, 5, 7, and 9
 - `references.bib`: unified bibliography
 
 Overleaf should compile the project with pdfLaTeX and BibTeX. A local equivalent is:
@@ -21,11 +21,11 @@ latexmk -pdf main.tex
 
 The portfolio uses **Communication as Access-to-Agency** as its organizing theme. Its evidence core is the communication system completed during EDU486: a 30-second student video memo after each activity, an every-day personalized science souvenir, a reviewed day-recap evidence story, and a full-week personalized family recap organized per attended day and per activity. The other six resources connect sensory access, inclusive peer culture, Prevent-Teach-Reinforce planning, AAC selection and continuity, and flexible peer participation to that system.
 
-Each resource carries an explicit assignment or practice-artifact trail. Teaching-placement evidence supplies concrete classroom access and instructional context; the Puzzle Plan joins student voice, artifacts, setting, and adult interpretation; EQUITAS asks whose knowledge can change the next lesson, institutional account, or family narrative. Resource 6 remains native TikZ. The ten resources occupy 20 pages, and six framing pages bring the visually reviewed PDF to 26 physical pages.
+Each resource carries an explicit assignment or practice-artifact trail. Teaching-placement evidence supplies concrete classroom access and instructional context; the Puzzle Plan joins student voice, artifacts, setting, and adult interpretation; EQUITAS asks whose knowledge can change the next lesson, institutional account, or family narrative. Public-native TikZ diagrams map the portfolio pathway, reusable access routes, and peer actions. The six restricted visuals show the completed showcase, memo-source sequence, Day 3 souvenir, Day 3 recap, Days 1--5 recap archive, and Day 3 family recap. The ten resources occupy 20 pages, and six framing pages bring the visually reviewed PDF to 26 physical pages.
 
 ## Restricted Educational Use and Evidence Boundary
 
-This is a private repository for an internal University of Rochester Warner School of Education submission. The portfolio contains actual completed artifact pages with identifiable youth names and photographs included under signed parent/guardian consent for course-related teaching, learning, assessment, and internal review. It is not for public or external distribution. Do not copy, post, publish, forward, distribute, or otherwise use the portfolio outside authorized Warner School course activities without separate written authorization and confirmation that parent/guardian consent covers the proposed use.
+This is a private repository for an internal University of Rochester Warner School of Education submission. The portfolio contains six completed artifact visuals with identifiable youth names and photographs included under signed parent/guardian consent for course-related teaching, learning, assessment, and internal review. It is not for public or external distribution. Do not copy, post, publish, forward, distribute, or otherwise use the portfolio outside authorized Warner School course activities without separate written authorization and confirmation that parent/guardian consent covers the proposed use.
 
 Family contacts, private correspondence, and unrelated records are excluded. Day 5 has photographs and a same-session transcript but no source video. The two full-week recap books and email drafts were completed and reviewed, but no parent-delivery receipt or family response was recovered; the portfolio says the packages were prepared, not sent. The prospective AAC examples do not claim that a particular camper used TD Snap or another AAC system.
 
