@@ -42,5 +42,3 @@ That nested directory is intentionally ignored by the outer course repository, s
 ## Submission Boundary
 
 GitHub and Overleaf are drafting and review environments. Nothing is considered submitted to Blackboard until Piter reviews the compiled PDF and confirms the Blackboard submission receipt.
-
-<!-- overleaf-debug-control-1 -->
