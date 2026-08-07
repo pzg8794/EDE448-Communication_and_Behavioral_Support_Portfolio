@@ -8,6 +8,7 @@ Set `main.tex` as the main document. The project is self-contained:
 
 - `main.tex`: title page, assignment and rubric map, portfolio map, synthesis, and document assembly
 - `resources/`: ten numbered practitioner resources
+- `assets/artifact-previews/`: three actual completed artifact pages embedded in Resources 5, 7, and 9
 - `references.bib`: unified bibliography
 
 Overleaf should compile the project with pdfLaTeX and BibTeX. A local equivalent is:
@@ -20,21 +21,23 @@ latexmk -pdf main.tex
 
 The portfolio uses **Communication as Access-to-Agency** as its organizing theme. Its evidence core is the communication system completed during EDU486: a 30-second student video memo after each activity, an every-day personalized science souvenir, a reviewed day-recap evidence story, and a full-week personalized family recap organized per attended day and per activity. The other six resources connect sensory access, inclusive peer culture, Prevent-Teach-Reinforce planning, AAC selection and continuity, and flexible peer participation to that system.
 
-Each resource carries an explicit assignment or practice-artifact trail. Teaching-placement evidence supplies concrete classroom access and instructional context; the Puzzle Plan joins student voice, artifacts, setting, and adult interpretation; EQUITAS asks whose knowledge can change the next lesson, institutional account, or family narrative. Resource 6 remains native TikZ, and all ten resources remain two-page spreads in the visually reviewed 26-page PDF.
+Each resource carries an explicit assignment or practice-artifact trail. Teaching-placement evidence supplies concrete classroom access and instructional context; the Puzzle Plan joins student voice, artifacts, setting, and adult interpretation; EQUITAS asks whose knowledge can change the next lesson, institutional account, or family narrative. Resource 6 remains native TikZ. The ten resources occupy 20 pages, and six framing pages bring the visually reviewed PDF to 26 physical pages.
 
-## Privacy and Evidence Boundary
+## Restricted Educational Use and Evidence Boundary
 
-The repository includes only de-identified text and public-safe descriptions. It does not contain participant photographs, youth names, personalized family stories, family contact information, or private messages. Day 5 has photographs and a same-session transcript but no source video. The two personalized full-week recap books and their email drafts were completed and reviewed, but no parent-delivery receipt or family response was recovered; the portfolio says the packages were prepared, not sent. The prospective AAC examples do not claim that a particular camper used TD Snap or another AAC system.
+This is a private repository for an internal University of Rochester Warner School of Education submission. The portfolio contains actual completed artifact pages with identifiable youth names and photographs included under signed parent/guardian consent for course-related teaching, learning, assessment, and internal review. It is not for public or external distribution. Do not copy, post, publish, forward, distribute, or otherwise use the portfolio outside authorized Warner School course activities without separate written authorization and confirmation that parent/guardian consent covers the proposed use.
+
+Family contacts, private correspondence, and unrelated records are excluded. Day 5 has photographs and a same-session transcript but no source video. The two full-week recap books and email drafts were completed and reviewed, but no parent-delivery receipt or family response was recovered; the portfolio says the packages were prepared, not sent. The prospective AAC examples do not claim that a particular camper used TD Snap or another AAC system.
 
 ## Course Repository Relationship
 
-The public course hub is [pzg8794/EDE448](https://github.com/pzg8794/EDE448). In a local checkout of that course repository, this dedicated repository lives at:
+The public course hub is [pzg8794/EDE448](https://github.com/pzg8794/EDE448). The identifiable artifact assets and restricted PDF must never be synchronized to that public repository. In a local checkout, this private dedicated repository lives at:
 
 ```text
 portfolio/repository/
 ```
 
-That nested directory is intentionally ignored by the outer course repository, so this repository keeps an independent history and remote. Pull Overleaf/GitHub edits here before review; after an approved revision, synchronize the editable source back to `portfolio/latex/` in the course repository.
+That nested directory is intentionally ignored by the outer course repository, so this repository keeps an independent history and remote. Pull Overleaf/GitHub edits here before review. Only non-identifying source changes may be synchronized back to `portfolio/latex/`; restricted images and compiled PDFs remain private.
 
 ## Submission Boundary
 
