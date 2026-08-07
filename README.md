@@ -8,7 +8,6 @@ Set `main.tex` as the main document. The project is self-contained:
 
 - `main.tex`: title page, assignment and rubric map, portfolio map, synthesis, and document assembly
 - `resources/`: ten numbered practitioner resources
-- `assets/`: original, public-safe visuals required by the resources
 - `references.bib`: unified bibliography
 
 Overleaf should compile the project with pdfLaTeX and BibTeX. A local equivalent is:
