@@ -6,9 +6,9 @@ This repository is the dedicated GitHub and Overleaf workspace for Piter Zacari 
 
 Set `main.tex` as the main document. The project is self-contained:
 
-- `main.tex`: title page, assignment and rubric map, portfolio map, synthesis, and document assembly
+- `main.tex`: title page, assignment and rubric map, contents, portfolio map, synthesis, and document assembly
 - `resources/`: ten numbered practitioner resources
-- `assets/artifact-previews/`: six restricted artifact visuals embedded on the title page and in Resources 4, 5, 7, and 9
+- `assets/artifact-previews/`: six restricted artifact visuals embedded on the contents page and in Resources 4, 5, 7, and 9
 - `references.bib`: unified bibliography
 
 Overleaf should compile the project with pdfLaTeX and BibTeX. A local equivalent is:
