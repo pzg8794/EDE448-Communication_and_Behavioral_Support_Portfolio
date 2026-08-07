@@ -1,23 +1,3 @@
-\providecommand{\restrictedartifactpanel}[4]{%
-  \begingroup
-  \begin{minipage}[c][#3][c]{#2}
-    \centering
-    \IfFileExists{#1}{%
-      \includegraphics[width=\linewidth,height=#3,keepaspectratio]{#1}%
-    }{%
-      \setlength{\fboxsep}{4pt}%
-      \fcolorbox{DeepNavy}{SoftGray}{%
-        \parbox[c][\dimexpr#3-2\fboxsep-2\fboxrule\relax][c]{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{%
-          \centering\scriptsize
-          \textbf{Restricted visual omitted from the public course-repository build.}\\[0.02in]
-          #4
-        }%
-      }%
-    }%
-  \end{minipage}%
-  \endgroup
-}
-
 \resourceheading{4}{30-Second Student Video Memo}{Student voice, formative communication, SEL, and behavior-as-communication}{Students, teachers, families, and support teams}{Implemented EDU486 post-activity video memos and de-identified source transcripts}
 
 \toolsection{The Existing Camp Artifact}
