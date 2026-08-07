@@ -38,9 +38,9 @@ Respect & Protect communication tools, sensory needs, boundaries, breaks, privac
 \vfill
 \begin{center}
 \begin{tikzpicture}[
-  action/.style={draw=DeepNavy, rounded corners=2pt, minimum width=1.45in,
-    minimum height=0.60in, align=center, font=\scriptsize, inner sep=4pt},
-  next/.style={-{Latex[length=1.7mm]}, line width=0.7pt, draw=PrimaryRed}
+	action/.style={draw=DeepNavy, rounded corners=2pt, minimum width=1.45in,
+		minimum height=0.60in, align=center, font=\scriptsize, inner sep=4pt},
+	next/.style={-{Latex[length=1.7mm]}, line width=0.7pt, draw=PrimaryRed}
 ]
 \node[action, fill=SoftBlue] (invite) {\textbf{INVITE}\\offer a real route};
 \node[action, fill=SoftGold, right=0.13in of invite] (wait) {\textbf{WAIT}\\keep the floor open};
@@ -49,7 +49,7 @@ Respect & Protect communication tools, sensory needs, boundaries, breaks, privac
 \draw[next] (invite) -- (wait);
 \draw[next] (wait) -- (ask);
 \draw[next] (ask) -- (respect);
-\node[font=\scriptsize\bfseries, text=DeepNavy, below=0.09in of wait.south, xshift=0.79in] {Choice stays with the learner};
+\node[font=\scriptsize\bfseries, text=DeepNavy, below=0.09in of $(wait.south)!0.5!(ask.south)$] {Choice stays with the learner};
 \end{tikzpicture}
 \end{center}
 
