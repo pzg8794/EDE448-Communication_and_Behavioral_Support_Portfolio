@@ -20,6 +20,8 @@
 \usepackage[table]{xcolor}
 \usepackage{tikz}
 \usepackage{fancyhdr}
+\usepackage{transparent}
+
 \usetikzlibrary{arrows.meta,positioning,fit,calc}
 \usepackage[natbibapa]{apacite}
 
@@ -31,6 +33,20 @@
 \definecolor{SoftGold}{HTML}{F8EDC7}
 \definecolor{SoftRose}{HTML}{F5E2E7}
 \definecolor{SoftGray}{HTML}{F4F4F4}
+
+\definecolor{AccessBlue}{HTML}{4F7FA8}
+\definecolor{MeaningGold}{HTML}{A67C22}
+\definecolor{RoutesGreen}{HTML}{4F7D60}
+\definecolor{ActionRose}{HTML}{A85C70}
+
+\definecolor{MapAccess}{HTML}{DDEEE7}
+\definecolor{MapEvidence}{HTML}{F4E1E6}
+\definecolor{MapRoutes}{HTML}{E0E9F6}
+\definecolor{MapAction}{HTML}{E7F0D6}
+
+\newcommand{\tocmark}[1]{%
+  \textcolor{#1}{\rule{0.09in}{0.09in}}\hspace{0.07in}%
+}
 
 \hypersetup{
   colorlinks=true,
@@ -68,7 +84,33 @@
 \newcommand{\resourceheading}[5]{%
   \clearpage
   \phantomsection
-  \addcontentsline{toc}{section}{Resource #1: #2}
+
+    \ifnum#1<4
+  \addcontentsline{toc}{section}{\protect\tocmark{AccessBlue}Resource #1: #2}
+\else
+  \ifnum#1<6
+    \addcontentsline{toc}{section}{\protect\tocmark{MeaningGold}Resource #1: #2}
+  \else
+    \ifnum#1=6
+      \addcontentsline{toc}{section}{\protect\tocmark{RoutesGreen}Resource #1: #2}
+    \else
+      \ifnum#1=7
+        \addcontentsline{toc}{section}{\protect\tocmark{ActionRose}Resource #1: #2}
+      \else
+        \ifnum#1=8
+          \addcontentsline{toc}{section}{\protect\tocmark{RoutesGreen}Resource #1: #2}
+        \else
+          \ifnum#1=9
+            \addcontentsline{toc}{section}{\protect\tocmark{ActionRose}Resource #1: #2}
+          \else
+            \addcontentsline{toc}{section}{\protect\tocmark{RoutesGreen}Resource #1: #2}
+          \fi
+        \fi
+      \fi
+    \fi
+  \fi
+\fi
+  
   {\color{PrimaryRed}\rule{\textwidth}{1.2pt}}\par
   \vspace{0.08in}
   {\Large\bfseries\color{DeepNavy}Resource #1: #2}\par
@@ -170,7 +212,7 @@
 {\normalsize Warner School of Education\\[0.16in]}
 
 {\color{PrimaryRed}\rule{\textwidth}{1.5pt}}\\[0.16in]
-{\Huge\bfseries Communication as\\[0.06in]Access-to-Agency}\\[0.16in]
+{\Huge\bfseries Communication as\\[0.06in]Access-to-Agency \& Empowerment}\\[0.16in]
 {\LARGE Communication and Positive Behavioral\\[0.04in]Support Strategies and Resources Portfolio}\\[0.13in]
 {\large EDE 448 --- Summer 2026}\\[0.10in]
 
@@ -184,8 +226,8 @@
 ]
 \node[pillar, fill=SoftBlue] (memo) {30-SECOND\\VIDEO MEMO};
 \node[pillar, fill=SoftGold, right=of memo] (souvenir) {EVERY-DAY\\SOUVENIR};
-\node[pillar, fill=SoftGreen, right=of souvenir] (recap) {DAY RECAP\\EVIDENCE STORY};
-\node[pillar, fill=SoftRose, right=of recap] (family) {FULL-WEEK\\FAMILY RECAP};
+\node[pillar, fill=SoftGreen, right=of souvenir] (recap) {DAILY RECAP\\EVIDENCE STORY};
+\node[pillar, fill=SoftRose, right=of recap] (family) {WEEKLY RECAP \&\\ FAMILY SHARED STORY};
 \draw[flow] (memo) -- (souvenir);
 \draw[flow] (souvenir) -- (recap);
 \draw[flow] (recap) -- (family);
@@ -197,7 +239,7 @@
 \parbox{0.90\textwidth}{%
 \centering\small\vspace{0.02in}
 \textbf{Ten practical resources for teachers, families, and support teams}\\[0.04in]
-Four implemented camp artifacts anchor the collection; six connected EDE448 tools extend the same commitments to sensory access, PTR, AAC, peer participation, and classroom practice.
+Implemented camp artifacts anchor the collection; connected course tools extended the same commitments to sensory access, PTR, AAC, peer participation, and classroom practice.
 }%
 }
 \end{center}
@@ -207,11 +249,11 @@ Four implemented camp artifacts anchor the collection; six connected EDE448 tool
 \begin{center}
 \renewcommand{\arraystretch}{1.18}
 \setlength{\tabcolsep}{4pt}
-\begin{tabular}{>{\bfseries\raggedleft\arraybackslash}p{1.75in} >{\raggedright\arraybackslash}p{5.08in}}
+\begin{tabular}{>{\bfseries\raggedleft\arraybackslash}p{1.90in} >{\raggedright\arraybackslash}p{5.08in}}
 Student & Piter Zacari Garcia Bautista \\
-Course & EDE 448 --- Communication and Positive Behavioral Supports for Students with Autism and Other Complex Needs \\
-Assignment & Communication and Positive Behavioral Support Strategies and Resources Portfolio \\
-Professional Context & Inclusive, technology-rich upper-elementary and middle school learning environments \\
+Course & Communication and Positive Behavioral Supports (CPBS) for Students with Autism and Other Complex Needs (EDE 448)\\
+Assignment & CPBS Strategies and Resources Portfolio \\
+Professional Context & Inclusive, tech-rich upper-elementary \& middle school learning environments \\
 Interpretive Framework & Puzzle Plan, with EQUITAS at its equity-centered heart \\
 Due Date & August 7, 2026 \\
 \end{tabular}
@@ -222,7 +264,7 @@ Due Date & August 7, 2026 \\
 \begin{center}
 \begin{minipage}{0.94\textwidth}
 \small
-My teaching placement taught me to make participation routes visible and treat student action, questions, artifacts, and multimodal responses as evidence. The \textbf{Puzzle Plan} carried that learning into camp by connecting lived experience, lesson design, student voice, scientific records, and adult decisions. \textbf{EQUITAS} tested whose account survived each layer and whether it changed interpretation, next-day design, institutional understanding, and family communication.
+My teaching placement taught me to make participation routes visible and treat student action, questions, artifacts, and multimodal responses as evidence. The \textit{Puzzle Plan} carried that learning into camp by connecting lived experience, lesson design, student voice, scientific records, and adult decisions. \textit{EQUITAS} tested whose account survived each layer and whether it changed interpretation, next-day design, institutional understanding, and family communication.
 \end{minipage}
 
 \vspace{0.12in}
@@ -230,7 +272,7 @@ My teaching placement taught me to make participation routes visible and treat s
 \parbox{0.90\textwidth}{%
 \centering\small
 \textbf{Restricted Educational Use Notice}\\[0.03in]
-\textbf{Not for public or external distribution.} This portfolio is provided solely for course-related teaching, learning, assessment, and internal review within the University of Rochester Warner School of Education. It contains identifiable youth names and photographs included under parent/guardian consent for this educational context. Do not copy, post, publish, forward, distribute, or otherwise use this portfolio outside authorized Warner School course activities without separate written authorization and confirmation that parent/guardian consent covers the proposed use.
+\textit{Not for public or external distribution.} This portfolio is provided solely for course-related teaching, learning, assessment, and internal review within the University of Rochester Warner School of Education.
 }%
 }
 \end{center}
@@ -240,118 +282,211 @@ My teaching placement taught me to make participation routes visible and treat s
 \hypersetup{pageanchor=true}
 \pagenumbering{roman}
 
-\section*{Assignment and Design Standard}
-\addcontentsline{toc}{section}{Assignment and Design Standard}
+% \section*{Assignment and Design Standard}
+% \addcontentsline{toc}{section}{Assignment and Design Standard}
 
-This culminating portfolio is worth 40 percent of the EDE448 grade and is due August 7, 2026. The Blackboard prompt contains the internally inconsistent phrase ``at least ten (8) resources/supports.'' I use the more demanding interpretation: ten resources, each designed to stand alone within one or two pages. Every entry explains the support for a teacher or family audience, connects it to communication, social-emotional learning, or behavior, identifies when and why it should be used, and provides relevant sources or websites. The ten resources occupy 20 pages; the title, assignment standard, contents, portfolio map, closing reflection, and references are six framing pages and are not counted toward the resource limit. The complete PDF therefore contains 26 physical pages.
+% This culminating portfolio is worth 40 percent of the EDE448 grade and is due August 7, 2026. The Blackboard prompt contains the internally inconsistent phrase ``at least ten (8) resources/supports.'' I use the more demanding interpretation: ten resources, each designed to stand alone within one or two pages. Every entry explains the support for a teacher or family audience, connects it to communication, social-emotional learning, or behavior, identifies when and why it should be used, and provides relevant sources or websites. The ten resources occupy 20 pages; the title, assignment standard, contents, portfolio map, closing reflection, and references are six framing pages and are not counted toward the resource limit. The complete PDF therefore contains 26 physical pages.
 
-The portfolio reworks applicable Module 1, 2, and 3 assignments into practitioner tools rather than stacking ten old papers together. Its evidence core is a communication system already built through EDU486: a 30-second student video memo after an activity, an every-day personalized souvenir, a day recap evidence story, and a full-week personalized family recap organized per attended day and per activity. Six connected EDE448 resources extend the same commitments to sensory access, peer culture, PTR, AAC, backup communication, and flexible roles. Six artifact visuals are reproduced under signed parent/guardian consent for this internal UofR educational review; family contacts, private correspondence, and unrelated records are not reproduced.
+% The portfolio reworks applicable Module 1, 2, and 3 assignments into practitioner tools rather than stacking ten old papers together. Its evidence core is a communication system already built through EDU486: a 30-second student video memo after an activity, an every-day personalized souvenir, a day recap evidence story, and a full-week personalized family recap organized per attended day and per activity. Six connected EDE448 resources extend the same commitments to sensory access, peer culture, PTR, AAC, backup communication, and flexible roles. Six artifact visuals are reproduced under signed parent/guardian consent for this internal UofR educational review; family contacts, private correspondence, and unrelated records are not reproduced.
 
-\toolsection{How the Rubric Is Made Visible}
+% \toolsection{How the Rubric Is Made Visible}
 
-\renewcommand{\arraystretch}{1.17}
-\setlength{\tabcolsep}{5pt}
-\begin{tabularx}{\textwidth}{>{\bfseries\RaggedRight\arraybackslash}p{1.70in} >{\RaggedRight\arraybackslash}X}
-\rowcolor{PrimaryRed}
-\color{white}Rubric Area & \color{white}Portfolio Evidence \\
-Scholarly connections & Claims are cited at the point of use and linked to instructional decisions; the reference list uses APA-style source information. \\
-\rowcolor{SoftGray}
-Organization and clarity & Ten numbered, categorized resources follow one repeated structure and include ready-to-use tables, scripts, checklists, or visuals. \\
-Relevance to practice & Every resource names a setting, implementation sequence, evidence to notice, and concrete teacher/family actions. \\
-\rowcolor{SoftGray}
-Evidence and reflection & Each entry distinguishes observation from inference, names limitations, and identifies conditions that would trigger adaptation. \\
-\end{tabularx}
+% \renewcommand{\arraystretch}{1.17}
+% \setlength{\tabcolsep}{5pt}
+% \begin{tabularx}{\textwidth}{>{\bfseries\RaggedRight\arraybackslash}p{1.70in} >{\RaggedRight\arraybackslash}X}
+% \rowcolor{PrimaryRed}
+% \color{white}Rubric Area & \color{white}Portfolio Evidence \\
+% Scholarly connections & Claims are cited at the point of use and linked to instructional decisions; the reference list uses APA-style source information. \\
+% \rowcolor{SoftGray}
+% Organization and clarity & Ten numbered, categorized resources follow one repeated structure and include ready-to-use tables, scripts, checklists, or visuals. \\
+% Relevance to practice & Every resource names a setting, implementation sequence, evidence to notice, and concrete teacher/family actions. \\
+% \rowcolor{SoftGray}
+% Evidence and reflection & Each entry distinguishes observation from inference, names limitations, and identifies conditions that would trigger adaptation. \\
+% \end{tabularx}
 
-\toolsection{Evidence Boundary}
+% \toolsection{Evidence Boundary}
 
-The Pine Brook technology-placement examples remain de-identified practice records, not diagnoses or universal student traits. The contents page and Resources 4, 5, 7, and 9 reproduce completed EDU486 visuals, including participant names and photographs, under signed parent/guardian consent for this internal UofR educational submission. Plans do not prove implementation; photographs show action but not complete understanding; automatic transcripts require source review before direct quotation. Day 5 has photographs and a same-session clean transcript but no source video. The full-week family packages were completed and prepared for delivery, but no delivery receipt or family response was recovered. The Communication Support Plan remains prospective and never claims that a particular camper used AAC; the Kit for Kids evidence remains limited to de-identified teacher notes and two anonymous responses.
+% The Pine Brook technology-placement examples remain de-identified practice records, not diagnoses or universal student traits. The contents page and Resources 4, 5, 7, and 9 reproduce completed EDU486 visuals, including participant names and photographs, under signed parent/guardian consent for this internal UofR educational submission. Plans do not prove implementation; photographs show action but not complete understanding; automatic transcripts require source review before direct quotation. Day 5 has photographs and a same-session clean transcript but no source video. The full-week family packages were completed and prepared for delivery, but no delivery receipt or family response was recovered. The Communication Support Plan remains prospective and never claims that a particular camper used AAC; the Kit for Kids evidence remains limited to de-identified teacher notes and two anonymous responses.
 
 \clearpage
-\tableofcontents
 
 \vfill
 \begin{center}
-\restrictedartifactpanel{assets/artifact-previews/cover-showcase-evidence-strip.png}{0.86\textwidth}{1.22in}{Restricted showcase evidence strip omitted in the public build.}%
-
-\vspace{0.04in}
-{\scriptsize\color{DeepNavy}\textbf{Implemented evidence at a glance.} A larger visual anchor for the camp communication system represented throughout the portfolio.}
-\end{center}
-
-\clearpage
-\pagenumbering{arabic}
-
-\section*{Portfolio Map}
-\addcontentsline{toc}{section}{Portfolio Map}
-
-\begin{center}
 {\normalsize\bfseries\color{DeepNavy}How the Resources Move Evidence Toward Agency}\par
 \vspace{0.08in}
+
 \begin{tikzpicture}[
   stage/.style={draw=DeepNavy, rounded corners=2pt, minimum width=1.48in,
     minimum height=0.78in, align=center, font=\scriptsize, inner sep=5pt},
   route/.style={-{Latex[length=1.8mm]}, line width=0.75pt, draw=PrimaryRed}
 ]
-\node[stage, fill=SoftBlue] (notice) {\textbf{NOTICE ACCESS}\\sensory setting, peers,\\behavior context\\\textit{Resources 1--3}};
-\node[stage, fill=SoftGold, right=0.16in of notice] (record) {\textbf{RECORD MEANING}\\student voice and\\personal evidence\\\textit{Resources 4--5}};
-\node[stage, fill=SoftGreen, right=0.16in of record] (keep) {\textbf{KEEP ROUTES OPEN}\\AAC, backup modes,\\flexible roles\\\textit{Resources 6, 8, 10}};
-\node[stage, fill=SoftRose, right=0.16in of keep] (return) {\textbf{RETURN FOR ACTION}\\day stories and\\family communication\\\textit{Resources 7, 9}};
+
+\node[stage, fill=SoftBlue] (notice) {
+  \textbf{NOTICE ACCESS}\\
+  sensory access, peer inclusion,\\
+  PTR support\\
+  \textit{Resources 1--3}
+};
+
+\node[stage, fill=SoftGold, right=0.16in of notice] (record) {
+  \textbf{RECORD MEANING}\\
+  video memo and personalized\\
+  science souvenir\\
+  \textit{Resources 4--5}
+};
+
+\node[stage, fill=SoftGreen, right=0.16in of record] (keep) {
+  \textbf{KEEP ROUTES OPEN}\\
+  AAC, low-tech backup,\\
+  flexible peer roles\\
+  \textit{Resources 6, 8, 10}
+};
+
+\node[stage, fill=SoftRose, right=0.16in of keep] (return) {
+  \textbf{RETURN FOR ACTION}\\
+  day recap and full-week\\
+  family recap\\
+  \textit{Resources 7, 9}
+};
+
 \draw[route] (notice) -- (record);
 \draw[route] (record) -- (keep);
 \draw[route] (keep) -- (return);
-\node[draw=MidTeal, fill=white, rounded corners=2pt, below=0.17in of $(record.south)!0.5!(keep.south)$,
-  minimum width=3.20in, minimum height=0.38in, align=center, font=\scriptsize] {\textbf{Puzzle Plan + EQUITAS:} whose evidence survives, and what does it change?};
+
+\node[
+  draw=MidTeal,
+  fill=white,
+  rounded corners=2pt,
+  below=0.17in of $(record.south)!0.5!(keep.south)$,
+  minimum width=3.20in,
+  minimum height=0.38in,
+  align=center,
+  font=\scriptsize
+] {
+  \textbf{Puzzle Plan + EQUITAS:}
+  whose evidence survives, and what does it change?
+};
+
 \end{tikzpicture}
 
 \vspace{0.07in}
+
 \parbox{0.86\textwidth}{\centering\small
-Read the collection as a feedback path: examine conditions, preserve learner meaning, keep communication available, and return evidence to the people who can change the next opportunity.}
+Read the collection as a connected path: examine access conditions, preserve student meaning and evidence, keep communication and participation routes open, and return that evidence toward planning, family partnership, and meaningful action.}
+
 \end{center}
 
-\vspace{0.08in}
+\vfill
+\tableofcontents
+\vfill
+
+
+
+\clearpage
+\pagenumbering{arabic}
+
+\vfill
 \small
 \setlength{\tabcolsep}{4pt}
-\begin{longtable}{>{\centering\arraybackslash}p{0.35in} >{\RaggedRight\arraybackslash}p{2.40in} >{\RaggedRight\arraybackslash}p{1.35in} >{\RaggedRight\arraybackslash}p{2.65in}}
-\rowcolor{PrimaryRed}
-\color{white}\bfseries \# & \color{white}\bfseries Resource & \color{white}\bfseries Primary Area & \color{white}\bfseries Assignment/Evidence Origin \\
+
+\arrayrulecolor{DeepNavy!20}
+\setlength{\arrayrulewidth}{0.75pt}
+
+\begin{longtable}{
+  >{\centering\arraybackslash}p{0.35in}
+  >{\RaggedRight\arraybackslash}p{2.40in}
+  >{\RaggedRight\arraybackslash}p{1.35in}
+  >{\RaggedRight\arraybackslash}p{2.65in}
+}
+
+\rowcolor{DeepNavy}
+\color{white}\bfseries \# &
+\color{white}\bfseries Resource &
+\color{white}\bfseries Primary Area &
+\color{white}\bfseries Assignment/Evidence Origin \\
+
+\rowcolor{MapAccess}
 1 & Sensory Access Walk and Redesign Checklist & Sensory/environment & Module 1 Sensory Walk; Pine Brook placement \\
-\rowcolor{SoftGray}
+\hline
+
+\rowcolor{MapAccess}
 2 & Many Ways to Be a Good Classmate & Inclusion/SEL & Module 1 taught Kit for Kids lesson; placement \\
+\hline
+
+\rowcolor{MapAccess}
 3 & PTR Evidence-to-Support Planning Guide & Positive behavior support & Module 2 PTR assignment; placement event \\
-\rowcolor{SoftGray}
+\hline
+
+\rowcolor{MapEvidence}
 4 & 30-Second Student Video Memo & Student voice/formative support & Implemented post-activity memos; de-identified transcript records \\
+\hline
+
+\rowcolor{MapEvidence}
 5 & Every-Day Personalized Science Souvenir & Recognition/continuity & Implemented personalized souvenirs; activity evidence \\
-\rowcolor{SoftGray}
+\hline
+
+\rowcolor{MapRoutes}
 6 & AAC Tool Selection and Implementation Guide & AAC & Module 3 TD Snap review; Grade 2 curriculum \\
+\hline
+
+\rowcolor{MapAction}
 7 & Day Recap Evidence Story & Collective memory/planning & Five implemented and reviewed recap decks \\
-\rowcolor{SoftGray}
+\hline
+
+\rowcolor{MapRoutes}
 8 & Low-Tech AAC Backup Starter & AAC continuity & Module 3 system; camp sensory feedback \\
-9 & Full-Week Personalized Family Recap & Family partnership & Module 3 logs; completed day-by-day family recap books \\
-\rowcolor{SoftGray}
-10 & Flexible Peer Roles and Participation Routes & Social interaction & Kit lesson; Identity Beads; policy/showcase roles \\
+\hline
+
+\rowcolor{MapAction}
+9 & Full-Week Personalized Family Recap & Family partnership & Module 3 logs; completed day-by-day family recap books \\\hline
+
+\rowcolor{MapRoutes}
+10 & Flexible Peer Roles and Participation Routes & Social interaction & Kit lesson; Identity Beads; policy/showcase roles \\\hline
+
 \end{longtable}
 \normalsize
 
-\vspace{0.05in}
-\begin{center}
-{\normalsize\bfseries\color{DeepNavy}Reusable Camp Access Board}\par
-\vspace{0.06in}
-\begin{tikzpicture}[
-  route/.style={draw=MidTeal, rounded corners=1.5pt, minimum width=1.30in,
-    minimum height=0.40in, align=center, font=\scriptsize\bfseries, inner sep=3pt}
-]
-\node[route, fill=SoftBlue] (talk) {TALK};
-\node[route, fill=SoftGold, right=0.10in of talk] (point) {POINT};
-\node[route, fill=SoftGreen, right=0.10in of point] (draw) {DRAW / WRITE};
-\node[route, fill=SoftRose, right=0.10in of draw] (build) {BUILD / MOVE};
-\node[route, fill=SoftRose, below=0.10in of talk] (photo) {PHOTO / AUDIO};
-\node[route, fill=SoftGreen, right=0.10in of photo] (partner) {PARTNER};
-\node[route, fill=SoftGold, right=0.10in of partner] (quiet) {QUIET ROUTE};
-\node[route, fill=SoftBlue, right=0.10in of quiet] (pass) {PASS / RETURN};
-\end{tikzpicture}
 
-\vspace{0.03in}
-{\scriptsize Every route can show rigorous learning; a learner may change routes at any time.}
+\vfill
+\begin{center}
+
+\transparent{0.85}{
+\includegraphics[
+  width=1.0\textwidth,
+  keepaspectratio
+]{assets/artifact-previews/Invisible Invaders - Evidence to Agency Pathway.png}
+}
+
+% \vspace{0.08in}
+{\small\color{DeepNavy}
+\textbf{Portfolio design map.}
+\textit{Invisible Invaders} brings the portfolio's central commitments together: evidence, access, multimodal participation, communication, regulation, and youth agency move through a connected system toward meaningful action.}
+
 \end{center}
+\vfill
+
+
+% \vspace{0.05in}
+% \begin{center}
+% {\normalsize\bfseries\color{DeepNavy}Reusable Camp Access Board}\par
+% \vspace{0.06in}
+% \begin{tikzpicture}[
+%   route/.style={draw=MidTeal, rounded corners=1.5pt, minimum width=1.30in,
+%     minimum height=0.40in, align=center, font=\scriptsize\bfseries, inner sep=3pt}
+% ]
+% \node[route, fill=SoftBlue] (talk) {TALK};
+% \node[route, fill=SoftGold, right=0.10in of talk] (point) {POINT};
+% \node[route, fill=SoftGreen, right=0.10in of point] (draw) {DRAW / WRITE};
+% \node[route, fill=SoftRose, right=0.10in of draw] (build) {BUILD / MOVE};
+% \node[route, fill=SoftRose, below=0.10in of talk] (photo) {PHOTO / AUDIO};
+% \node[route, fill=SoftGreen, right=0.10in of photo] (partner) {PARTNER};
+% \node[route, fill=SoftGold, right=0.10in of partner] (quiet) {QUIET ROUTE};
+% \node[route, fill=SoftBlue, right=0.10in of quiet] (pass) {PASS / RETURN};
+% \end{tikzpicture}
+
+% \vspace{0.03in}
+% {\scriptsize Every route can show rigorous learning; a learner may change routes at any time.}
+% \end{center}
 
 \input{resources/01-sensory-access}
 \input{resources/02-good-classmate}
@@ -367,6 +502,7 @@ Read the collection as a feedback path: examine conditions, preserve learner mea
 \clearpage
 \section*{Portfolio-Wide Reflection and Revision Commitments}
 \addcontentsline{toc}{section}{Portfolio-Wide Reflection and Revision Commitments}
+
 \begingroup
 \small
 \setstretch{1.0}
@@ -374,23 +510,23 @@ Read the collection as a feedback path: examine conditions, preserve learner mea
 
 \toolsection{From Teaching Placement to Course Practice}
 
-Across this portfolio, my central learning is that inclusion is not placement, a device, or quieter behavior. It is built when sensory conditions, communication routes, peer norms, roles, and adult responses let learners understand, contribute, refuse, repair, and influence what happens next. Pine Brook made this concrete: competence in technology-rich lessons could be hidden by login friction, rapid directions, noise, crowded materials, unclear roles, peer pacing, or removal of a familiar tool. When one learner kept a laptop beside blocks, participation increased after adults changed access. The sensory walk, Kit for Kids lesson, and PTR inquiry taught me to examine the environment, separate observation from inference, teach peers to help without taking over, and redesign transitions before demanding tolerance \citep{guggenheimSensory,michigan2025sensory,oar2026kit,dunlap2019ptr}.
+Across this portfolio, my central learning is that inclusion is created when sensory conditions, communication routes, peer norms, roles, and adult responses allow learners to understand, contribute, question, refuse, repair, return, and influence. My teaching placement at Pine Brook made this concrete. Competence in technology-rich lessons could be obscured by rapid directions, noise, crowded materials, unclear roles, peer pacing, or removal of a familiar tool. On one occasion, a learner joined a blocks activity after adults removed the either--or condition requiring the learner to give up a familiar laptop. Changing the condition revealed participation the original design had concealed. The sensory walk, Kit for Kids lesson, and PTR inquiry pushed me to examine conditions before judging behavior, separate observation from inference, teach peers to support without taking over, and redesign barriers before demanding tolerance \citep{guggenheimSensory,michigan2025sensory,oar2026kit,dunlap2019ptr}.
 
-The EDE448 readings extended that field lesson: sensory access should be proactive; peer culture is part of positive support; AAC is multimodal rather than a last resort; and competence grows through opportunity, responsive partners, and consequential messages \citep{ashaAAC,downing2015classroom,jorgensen2018competence,peckhamhardin2015behavior}. Camp tested those ideas. Youth could point, tell, show, partner, observe, pass, return, change roles, use movement as a reset, and select public or private showcase participation while remaining part of rigorous environmental-science inquiry. Flexible routes did not lower expectations; they separated the intellectual goal from one required pace, posture, sensory tolerance, or performance mode.
+EDE448 extended that lesson across communication and positive support. Sensory access should be proactive, peer culture is part of the support environment, AAC is multimodal rather than a last resort, and competence develops through opportunity, responsive partners, meaningful roles, and consequential messages \citep{ashaAAC,downing2015classroom,jorgensen2018competence,peckhamhardin2015behavior}. EDU486 camp tested those principles across real activities. Youth could point, tell, show, write, partner, pass, return, change roles, and use movement as a reset while doing rigorous environmental-science work \citep{campEvidence2026}. Flexible routes separated the learning goal from one required pace, posture, sensory tolerance, communication mode, or performance style.
 
 \toolsection{What Puzzle Plan and EQUITAS Produced}
 
-The \textbf{Puzzle Plan} turned these lessons into a connected evidence-to-design cycle. It places lived experience, student words, observable action, work products, scientific records, context, family knowledge, and adult decisions beside one another so no diagnosis, photograph, behavior count, or polished artifact becomes the whole story. Its camp deliverables work at four timescales: the video memo preserves an immediate account; the daily souvenir recognizes a contribution; the day recap reconstructs the sequence and changes next-day planning; and the full-week family recap carries a student-reviewed story across settings. The ten resources extend that cycle into sensory redesign, peer instruction, PTR, AAC and backup communication, family partnership, and flexible roles. Each enacts the framework's demand that evidence produce a teaching decision \citep{campEvidence2026}.
+The \textsc{Puzzle Plan} turned these lessons into a connected evidence-to-design cycle. It places lived experience, student words, observable action, work products, scientific records, context, family knowledge, and adult decisions beside one another so no single source becomes the whole story. The camp artifacts illustrate that cycle across time: a video memo preserves an immediate account; a daily souvenir reconstructs a contribution; a day recap connects activities, evidence limits, and next questions; and a full-week recap carries that learning story across settings. At the final showcase, youth moved from participating in investigations to explaining evidence, uncertainty, and possible solutions to families, visitors, and younger scholars \citep{campEvidence2026}. The ten portfolio resources translate the same logic into sensory redesign, peer instruction, PTR, student voice, AAC, family partnership, evidence stories, and flexible roles. Across them, evidence matters because it can change a teaching decision.
 
-\textbf{EQUITAS}, the equity-centered heart of the Puzzle Plan, asks whose knowledge enters the record, whose contribution disappears, what context is missing, how power shapes interpretation, and who can revise the story. That test produced concrete safeguards: multiple communication modes, wait time, pass-and-return routes, consent to record or withhold, bilingual and low-tech options, changeable roles, separation of observation from interpretation, and evidence that a message changed materials, pacing, access, or an adult decision. If support reduces visible disruption while also reducing communication, trust, dignity, agency, or belonging, EQUITAS identifies a design failure rather than success.
+\textsc{EQUITAS}, the equity-centered heart of the Puzzle Plan, asks: \textit{Whose knowledge enters the record? Whose contribution disappears? What context is missing? Who controls the interpretation? Who can disagree, refuse, revise, or correct the story?} Those questions produced safeguards throughout the portfolio: multiple communication routes, wait time, pass-and-return options, consent, bilingual and low-tech access, changeable roles, and explicit evidence boundaries. Most notably, EQUITAS requires evidence that communication has consequences. A learner's message should be able to change materials, pacing, roles, access, questions, conditions, or an adult decision. If support reduces visible disruption while also reducing communication, trust, dignity, agency, or belonging, quieter behavior cannot be treated as success.
 
 \toolsection{Families, Community, and Revision Commitments}
 
-This learning widened the unit of inclusion. Parents and families are not recipients at the end of a school-controlled pipeline. In the family recap, the learner controls what travels home and families can return language, context, priorities, and interpretations; family knowledge is evidence, not an afterthought \citep{zacarian2015community}. Peers share responsibility through invite, wait, ask, and respect; educators, support professionals, collaborators, and program leaders share responsibility for access and implementation. Community-facing science, policy roles, and showcase choices connect learning beyond the classroom while preserving a learner's right not to perform publicly. Inclusion redistributes responsibility and interpretive power across the learning community instead of training one child to adapt to every condition.
+This work widened my understanding of where inclusion happens and who participates in producing it. A family-facing learning story should give the learner meaningful control over what travels home while creating an accessible route for families to contribute language, context, priorities, questions, and interpretations. Family knowledge belongs inside the evidence system \citep{zacarian2015community}. Responsibility is similarly distributed across the learning community: peers practice \textit{invite, wait, ask, and respect}; educators design communication and sensory access; families contribute knowledge that may not be visible at school; and collaborators share responsibility for implementation. Community-facing science, policy roles, and choices can carry learning beyond the classroom while preserving dignity. Inclusion therefore redistributes responsibility for access, interpretation, and participation across the learning community.
 
-My revision commitment is to co-design these tools across languages and communication modes; track adult implementation and whether student messages produce change; offer accessible, translated, no-photo, no-message, and private options; invite family and community response without burden; and distinguish what was planned, prepared, delivered, received, and learned. The evidence boundaries remain: a photograph does not prove understanding, one event does not establish function, a transcript requires review, and a prepared family package does not prove receipt. The teacher's work is not to complete the puzzle for another person. Puzzle Plan keeps the pieces connected; EQUITAS asks who has power over their meaning. Together, they require support to leave learners and communities with more authorship, access, and power to shape what happens next.
-
+My revision commitment is to co-design these tools across languages and communication modes; track adult implementation and whether learner messages produce change; provide accessible, translated, low-tech, no-photo, no-message, and private routes; invite family and community knowledge without unnecessary burden; and distinguish what was \textit{planned, prepared, delivered, received, observed, interpreted,} and \textit{learned}. The evidence boundaries developed throughout this portfolio will remain central. The teacher's work is not to complete the puzzle for another person. \textsc{Puzzle Plan} keeps the pieces connected; \textsc{EQUITAS} asks who has power over their meaning. Together, they move communication from access toward agency: learners gain more ways to author, question, revise, and shape what happens next.
 \endgroup
+
 \clearpage
 \bibliography{references}
 
